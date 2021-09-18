@@ -7,7 +7,7 @@ Based on [Dylan J. Castillo's Twitter Python bot,](https://github.com/dylanjcast
 NOTE: This is my first time creating a bot, let alone working in Python, so I plan to do a write up on how this bot works and what I learned in the near future.
 
  ## Additional requirements and dependencies (in comparison to original project):
-  1. Lambda Layer to add Imagemagick with Freetype support: https://github.com/sw360cab/imagemagick-aws-lambda-2
+  1. Lambda Layer to add Imagemagick with Freetype support: https://github.com/sw360cab/imagemagick-aws-lambda-2 (Appreciations to [sw360cab.](https://github.com/sw360cab))
   2. DynamoDB running three tables (quotes, screenshots, combinations)
   3. S3 bucket to hold CSV file of quotes/text and a pool of screenshots/images
   4. A legally obtained .ttf font file (to be placed in the fonts folder for Imagemagick captioning)
