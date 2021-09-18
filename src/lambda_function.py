@@ -26,6 +26,7 @@ class BobJackRossManApp:
         self.twitter_api = tweepy.API(auth)
         self.tweets_text_file = 'quotes.csv'
         self.text_output_location = f'/tmp/{self.tweets_text_file}'
+        self.font='/var/task/fonts/your_font.ttf'
         self.s3_bucket = 'your-s3-bucket'
         self.s3_dir = 'images_folder/'
         self.s3 = S3Helper()
@@ -143,7 +144,7 @@ class BobJackRossManApp:
         cmd = 'convert'
         caption = f'caption:{tweet_text}'
         combined_tweet_location = '/tmp/combined.png'
-        args = [cmd,'-background','#0008','-fill','white','-font','/var/task/fonts/ARIAL.TTF','-pointsize','43','-gravity','center','-size','900x', caption, tweet_image,'+swap','-gravity','south','-geometry','+0+25','-composite',combined_tweet_location]
+        args = [cmd,'-background','#0008','-fill','white','-font',self.font,'-pointsize','43','-gravity','center','-size','900x', caption, tweet_image,'+swap','-gravity','south','-geometry','+0+25','-composite',combined_tweet_location]
         subprocess.run(args)
         self.combination_value=self._generate_md5hash(combined_tweet_location)
         check_for_unique_hash=DynamoHelper(table_name=self.combination_table).get_item(table_name=self.combination_table,partition_key=self.combination_key,partition_value=self.combination_value)
