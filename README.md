@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-v3.8.3-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/bobjackrossman.svg?style=social&label=Follow%20%40bobjackrossman)](https://twitter.com/bobjackrossman)
 
-Based on [Dylan J. Castillo's Twitter Python bot,](https://github.com/dylanjcastillo/twitter-bot-python-aws-lambda) this fork makes an AWS Lambda-based bot that randomly and dynamically creates captioned images via a folder of screenshots and an CSV file located in an AWS S3 bucket. Additionally, this bot utilizes  AWS DynamoDB to track and reduce repetitious use of the same text, images, and combinations. It's more interesting that way!  
+Based on [Dylan J. Castillo's Twitter Python bot,](https://github.com/dylanjcastillo/twitter-bot-python-aws-lambda) this fork makes an AWS Lambda-based bot that randomly and dynamically creates captioned images via a folder of screenshots and an CSV file located in an AWS S3 bucket. Additionally, this bot utilizes  AWS DynamoDB to track and reduce repetitions of the same text, images, and combinations. It's more interesting that way!  
 
 NOTE: This is my first time creating a bot, let alone working in Python, so I plan to do a write up on how this bot works and what I learned in the near future.
 
