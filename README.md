@@ -1,3 +1,25 @@
+# Horsin' Around with Bobjack Rossman: Twitter Bot Using Python, ImageMagick, AWS Lambda, AWS S3, and AWS DynamoDB
+
+![Python](https://img.shields.io/badge/Python-v3.8.3-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/bobjackrossman.svg?style=social&label=Follow%20%40bobjackrossman)](https://twitter.com/bobjackrossman)
+
+Based on [Dylan J. Castillo's Twitter Python bot,](https://github.com/dylanjcastillo/twitter-bot-python-aws-lambda) this fork makes an AWS Lambda-based bot that randomly and dynamically creates captioned images via a folder of screenshots and an CSV file located in an AWS S3 bucket. Additionally, this bot utilizes  AWS DynamoDB to track and reduce repetitious use of the same text, images, and combinations. It's more interesting that way!  
+
+NOTE: This is my first time creating a bot, let alone working in Python, so I plan to do a write up on how this bot works and what I learned in the near future.
+
+ ## Additional requirements and dependencies (in comparison to original project):
+  1. Additional Lambda Layer to add Imagemagick with Freetype support: https://github.com/sw360cab/imagemagick-aws-lambda-2
+  2. DynamoDB running three tables (quotes, screenshots, combinations)
+  3. S3 bucket to hold CSV file of quotes/text and a pool of screenshots/images
+  4. A legally obtained .ttf font file (to be placed in the fonts folder for Imagemagick captioning)
+ 
+## Limitations
+
+Read this before using the bot:
+ - Unlike the original bot, this may exceed AWS free tier. Use at your own financial risk.
+ - Same rules as the original bot apply. If you want something more complex, you'll need to add it on your own.
+
+Original author dylanjcastillo's ReadME starts here: 
+---------------------------
 # Twitter Bot Using Python and AWS Lambda
 
 ![Python](https://img.shields.io/badge/Python-v3.8.3-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/_dylancastillo.svg?style=social&label=Follow%20%40_dylancastillo)](https://twitter.com/_dylancastillo)
