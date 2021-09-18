@@ -18,7 +18,7 @@ Read this before using the bot:
  - Unlike the original bot, this may exceed AWS free tier. Use at your own financial risk.
  - Same rules as the original bot apply. If you want something more complex, you'll need to add it on your own.
 
-Original author dylanjcastillo's REAdME starts here: 
+Original author dylanjcastillo's README starts here: 
 ---------------------------
 
 
